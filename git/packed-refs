@@ -1,9 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-0793e6c5a33366ad340ece2400c6e30b7a5457d0 refs/remotes/origin/EFIC-233
-d96f3534e66f6007a8d3467b5360da0b99ae2f3a refs/remotes/origin/caravel_openframe
-ac2bb472ff86f898f771bf1b4317d542bcaa5a3e refs/remotes/origin/main
-38f5a2dbc0f277a5218ebab826304f20c0ba41bb refs/remotes/origin/ol_fix
-3dc29b1a727082c620b308b4894b625acc803c92 refs/tags/mpw-3
-fc85327a3104aecf30ea31569c5d0ac8116288fb refs/tags/mpw-5
-8606a48f30231a23287cf4c1aee82b566f8c8e17 refs/tags/mpw-5a
-67640ef400d8df3cfb0a49c79a3b7e14136869b5 refs/tags/mpw-two-c
