@@ -1,0 +1,44 @@
+* NGSPICE file created from partition2_alone.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_PDNSV3 a_n73_n780# a_15_n780# w_n211_n990# a_n33_n868#
+X0 a_15_n780# a_n33_n868# a_n73_n780# w_n211_n990# sky130_fd_pr__nfet_01v8_lvt ad=2.262e+12p pd=1.618e+07u as=2.262e+12p ps=1.618e+07u w=7.8e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_HCAWEA w_n201_n998# a_n35_n832# a_n35_400#
+X0 a_n35_n832# a_n35_400# w_n201_n998# sky130_fd_pr__res_high_po_0p35 l=4e+06u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_SVGS7M a_n35_n482# w_n201_n648# a_n35_50#
+X0 a_n35_n482# a_n35_50# w_n201_n648# sky130_fd_pr__res_high_po_0p35 l=500000u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p69_NCBZCX a_124_n501# a_510_n501# a_n1420_69#
++ a_n262_69# a_510_69# a_n262_n501# a_n1034_69# a_n648_69# a_896_n501# a_1282_n501#
++ a_1282_69# a_124_69# a_896_69# a_n1034_n501# w_n1586_n667# a_n1420_n501# a_n648_n501#
+X0 a_n648_n501# a_n648_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X1 a_n1034_n501# a_n1034_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X2 a_1282_n501# a_1282_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X3 a_124_n501# a_124_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X4 a_n262_n501# a_n262_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X5 a_n1420_n501# a_n1420_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X6 a_510_n501# a_510_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X7 a_896_n501# a_896_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_2_3HBNLG m4_n3351_n3100# c2_n3251_n3000#
+X0 c2_n3251_n3000# m4_n3351_n3100# sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3e+07u
+.ends
+
+
+* Top level circuit partition2_alone
+
+XXM15 VRF m1_13448_7229# VSS m1_13380_8810# sky130_fd_pr__nfet_01v8_lvt_PDNSV3
+XXR4 VSS VB1_5 m1_13380_8810# sky130_fd_pr__res_high_po_0p35_HCAWEA
+XXR14 VDD VSS m1_13448_7229# sky130_fd_pr__res_high_po_0p35_SVGS7M
+XXR17 VDD VSS VOUT2 sky130_fd_pr__res_high_po_0p35_SVGS7M
+Xsky130_fd_pr__res_high_po_0p69_NCBZCX_0 VOUT1 VOUT1 VDD VDD VDD VOUT1 VDD VDD VOUT1
++ VOUT1 VDD VDD VDD VOUT1 VSS VOUT1 VOUT1 sky130_fd_pr__res_high_po_0p69_NCBZCX
+XXC5 VOUT1 m1_13380_8810# sky130_fd_pr__cap_mim_m3_2_3HBNLG
+XXM21 VSS VOUT2 VSS VOUT1 sky130_fd_pr__nfet_01v8_lvt_PDNSV3
+.end
+

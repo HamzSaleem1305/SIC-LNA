@@ -1,0 +1,137 @@
+* NGSPICE file created from /home/shahid/Desktop/EDA/test/Magic_sic_lna_corner_sims/partition2.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_PDNSV3 a_n73_n780# a_15_n780# w_n211_n990# a_n33_n868#
+X0 a_15_n780# a_n33_n868# a_n73_n780# w_n211_n990# sky130_fd_pr__nfet_01v8_lvt ad=2.262e+12p pd=1.618e+07u as=2.262e+12p ps=1.618e+07u w=7.8e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_HCAWEA w_n201_n998# a_n35_n832# w_n201_n998#ê
++ a_n35_400#
+X0 a_n35_n832# a_n35_400# w_n201_n998# sky130_fd_pr__res_high_po_0p35 l=4e+06u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_SVGS7M a_n35_n482# w_n201_n648# w_n201_n648ê
++ a_n35_50#
+X0 a_n35_n482# a_n35_50# w_n201_n648# sky130_fd_pr__res_high_po_0p35 l=500000u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p69_NCBZCX a_124_n501# a_510_n501# a_n1420_69#
++ a_n262_69# a_510_69# a_n262_n501# a_n1034_69# a_n648_69# a_896_n501# a_1282_n501#
++ a_1282_69# a_124_69# a_896_69# a_n1034_n501# w_n1586_n667# a_n1420_n501# a_n648_n501#
+X0 a_n648_n501# a_n648_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X1 a_n1034_n501# a_n1034_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X2 a_1282_n501# a_1282_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X3 a_124_n501# a_124_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X4 a_n262_n501# a_n262_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X5 a_n1420_n501# a_n1420_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X6 a_510_n501# a_510_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+X7 a_896_n501# a_896_69# w_n1586_n667# sky130_fd_pr__res_high_po_0p69 l=690000u
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_2_3HBNLG m4_n3351_n3100# c2_n3251_n3000#
+X0 c2_n3251_n3000# m4_n3351_n3100# sky130_fd_pr__cap_mim_m3_2 l=3e+07u w=3e+07u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_V4M8MU a_n73_n1000# a_15_n1000# a_n15_n1026# VSUBS
+X0 a_15_n1000# a_n15_n1026# a_n73_n1000# VSUBS sky130_fd_pr__nfet_01v8_lvt ad=2.9e+12p pd=2.058e+07u as=2.9e+12p ps=2.058e+07u w=1e+07u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_MGKMGH a_n33_1031# a_63_n1097# a_n129_n1097# a_15_n1000#
++ a_n173_n1000# w_n311_n1219# a_111_n1000# a_n81_n1000#
+X0 a_111_n1000# a_63_n1097# a_15_n1000# w_n311_n1219# sky130_fd_pr__pfet_01v8 ad=3.1e+12p pd=2.062e+07u as=3.3e+12p ps=2.066e+07u w=1e+07u l=150000u
+X1 a_n81_n1000# a_n129_n1097# a_n173_n1000# w_n311_n1219# sky130_fd_pr__pfet_01v8 ad=3.3e+12p pd=2.066e+07u as=3.1e+12p ps=2.062e+07u w=1e+07u l=150000u
+X2 a_15_n1000# a_n33_1031# a_n81_n1000# w_n311_n1219# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+07u l=150000u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_Q33GG7 a_n413_n1000# w_n551_n1210# a_15_n1088#
++ a_111_1022# a_63_n1000# a_n33_n1000# a_n273_1022# a_n129_n1000# a_n225_n1000# a_n321_n1000#
++ a_207_n1088# a_159_n1000# a_351_n1000# a_255_n1000# a_n177_n1088# a_n81_1022# a_n369_n1088#
++ a_303_1022#
+X0 a_159_n1000# a_111_1022# a_63_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=3.3e+12p pd=2.066e+07u as=3.3e+12p ps=2.066e+07u w=1e+07u l=150000u
+X1 a_n225_n1000# a_n273_1022# a_n321_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=3.3e+12p pd=2.066e+07u as=3.3e+12p ps=2.066e+07u w=1e+07u l=150000u
+X2 a_63_n1000# a_15_n1088# a_n33_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=3.3e+12p ps=2.066e+07u w=1e+07u l=150000u
+X3 a_n129_n1000# a_n177_n1088# a_n225_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=3.3e+12p pd=2.066e+07u as=0p ps=0u w=1e+07u l=150000u
+X4 a_n33_n1000# a_n81_1022# a_n129_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=1e+07u l=150000u
+X5 a_351_n1000# a_303_1022# a_255_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=3.1e+12p pd=2.062e+07u as=3.3e+12p ps=2.066e+07u w=1e+07u l=150000u
+X6 a_255_n1000# a_207_n1088# a_159_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=0p ps=0u w=1e+07u l=150000u
+X7 a_n321_n1000# a_n369_n1088# a_n413_n1000# w_n551_n1210# sky130_fd_pr__nfet_01v8_lvt ad=0p pd=0u as=3.1e+12p ps=2.062e+07u w=1e+07u l=150000u
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_S8HYGH w_n201_n1218# a_n35_620# a_n35_n1052#
+X0 a_n35_n1052# a_n35_620# w_n201_n1218# sky130_fd_pr__res_high_po_0p35 l=6.2e+06u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_TRD6KL a_n73_n780# w_n211_n990¿ a_15_n780# w_n211_n990#
++ a_n33_n868#
+X0 a_15_n780# a_n33_n868# a_n73_n780# w_n211_n990# sky130_fd_pr__nfet_01v8_lvt ad=2.262e+12p pd=1.618e+07u as=2.262e+12p ps=1.618e+07u w=7.8e+06u l=150000u
+.ends
+
+.subckt partition1_lo VSS VRF sky130_fd_pr__nfet_01v8_lvt_TRD6KL_0/w_n211_n990¿ VOUT1
++ VDD VB1_4
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_40 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_41 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_30 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__pfet_01v8_MGKMGH_0 VRF VRF VRF VTEST1 VTEST1 VDD VDD VDD sky130_fd_pr__pfet_01v8_MGKMGH
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_43 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_42 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_31 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_32 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_20 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_21 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_10 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_44 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_33 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_22 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_11 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_45 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_34 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_23 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_12 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_35 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_24 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_13 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_36 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_25 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_14 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_37 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_26 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_15 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_38 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_27 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_16 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_Q33GG7_0 VTEST1 VSS VB1_4 VB1_4 VOUT1 VTEST1 VB1_4 VOUT1
++ VTEST1 VOUT1 VB1_4 VTEST1 VTEST1 VOUT1 VB1_4 VB1_4 VB1_4 VB1_4 sky130_fd_pr__nfet_01v8_lvt_Q33GG7
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_39 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_28 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_17 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_29 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_18 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_19 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__res_high_po_0p35_S8HYGH_0 VSS VB0_75 VSI1 sky130_fd_pr__res_high_po_0p35_S8HYGH
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_0 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_1 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_2 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_3 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_4 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_5 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_6 VSS VTEST1 VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_TRD6KL_0 VRF sky130_fd_pr__nfet_01v8_lvt_TRD6KL_0/w_n211_n990¿
++ VSS VSS VB0_75 sky130_fd_pr__nfet_01v8_lvt_TRD6KL
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_7 VTEST1 VSS VSI1 VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_8 VSS VTEST1 VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+Xsky130_fd_pr__nfet_01v8_lvt_V4M8MU_9 VTEST1 VSS VRF VSS sky130_fd_pr__nfet_01v8_lvt_V4M8MU
+.ends
+
+
+* Top level circuit /home/shahid/Desktop/EDA/test/Magic_sic_lna_corner_sims/partition2
+
+XXM15 VRF m1_13448_7229# XC5/VSUBS m1_13380_8810# sky130_fd_pr__nfet_01v8_lvt_PDNSV3
+XXR4 XC5/VSUBS VB1_5 XC5/VSUBS m1_13380_8810# sky130_fd_pr__res_high_po_0p35_HCAWEA
+XXR14 VDD XC5/VSUBS XR14/w_n201_n648ê m1_13448_7229# sky130_fd_pr__res_high_po_0p35_SVGS7M
+XXR17 VDD XC5/VSUBS XC5/VSUBS VOUT2 sky130_fd_pr__res_high_po_0p35_SVGS7M
+Xsky130_fd_pr__res_high_po_0p69_NCBZCX_0 VOUT1 VOUT1 VDD VDD VDD VOUT1 VDD VDD VOUT1
++ VOUT1 VDD VDD VDD VOUT1 XC5/VSUBS VOUT1 VOUT1 sky130_fd_pr__res_high_po_0p69_NCBZCX
+XXC5 VOUT1 m1_13380_8810# sky130_fd_pr__cap_mim_m3_2_3HBNLG
+Xpartition1_lo_0 XC5/VSUBS VRF XC5/VSUBS VOUT1 VDD partition1_lo_0/VB1_4 partition1_lo
+XXM21 XC5/VSUBS VOUT2 XC5/VSUBS VOUT1 sky130_fd_pr__nfet_01v8_lvt_PDNSV3
+.end
+
