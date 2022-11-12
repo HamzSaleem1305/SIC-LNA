@@ -1,0 +1,16 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for
+*+ layout_oct_20/interdigitezed_exmaple.sch
+**.subckt interdigitezed_exmaple VRF VSI1 VSS Drain1 Drain2
+*.iopin VRF
+*.iopin VSI1
+*.iopin VSS
+*.iopin Drain1
+*.iopin Drain2
+XM1 Drain1 VRF VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=220 nf=22 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM20 Drain2 VSI1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=240 nf=24 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+**.ends
+.end

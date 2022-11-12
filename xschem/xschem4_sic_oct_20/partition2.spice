@@ -1,0 +1,21 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for layout_oct_20/partition2.sch
+**.subckt partition2 VDD VOUT1 VOUT2 VB1_5 VSS VRF
+*.iopin VDD
+*.iopin VOUT1
+*.iopin VOUT2
+*.iopin VB1_5
+*.iopin VSS
+*.iopin VRF
+XR4 VB1_5 net1 VSS sky130_fd_pr__res_high_po_0p35 L=4 mult=1 m=1
+XC5 net1 VOUT1 sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+XM15 net2 net1 VRF VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR14 net2 VDD VSS sky130_fd_pr__res_high_po_0p35 L=0.5 mult=1 m=1
+XR15 VOUT1 VDD VSS sky130_fd_pr__res_high_po_0p69 L=0.69 mult=8 m=8
+XM21 VOUT2 VOUT1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR17 VOUT2 VDD VSS sky130_fd_pr__res_high_po_0p35 L=0.5 mult=1 m=1
+**.ends
+.end

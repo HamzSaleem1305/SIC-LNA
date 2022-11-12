@@ -1,0 +1,14 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_final_CMS_copy/partition5.sch
+**.subckt partition5 VOUT VDD VSS VO2
+*.iopin VOUT
+*.iopin VDD
+*.iopin VSS
+*.iopin VO2
+XM4 VDD net1 VOUT VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=100 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR5 net1 VDD VSS sky130_fd_pr__res_high_po_0p35 L=4 mult=1 m=1
+XR6 VSS VOUT VSS sky130_fd_pr__res_high_po_0p35 L=15 mult=1 m=1
+XC3 VO2 net1 sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+**.ends
+.end

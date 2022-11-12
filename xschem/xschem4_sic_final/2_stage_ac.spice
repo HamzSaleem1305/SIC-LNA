@@ -1,0 +1,99 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem3/2_stage_ac.sch
+**.subckt 2_stage_ac
+XM1 vout VIN GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=160 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 VIN- GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=160 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+C1 net21 VIN 10p m=1
+C2 net22 VIN- 10p m=1
+V2 net3 GND sin 0 10m 2.5e9 0 0 180
+V3 net4 GND 0.7
+R2 net2 net21 50 m=1
+R5 net22 net3 50 m=1
+XM3 vo1n net5 vout GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=120 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+V5 net5 GND 1.55
+XR1 vo1n net6 GND sky130_fd_pr__res_high_po_0p69 L=1 mult=12 m=12
+V7 net6 GND 1.8
+XM4 net7 net9 VIN GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XR6 net7 net6 GND sky130_fd_pr__res_high_po_0p35 L=0.35 mult=1 m=1
+V8 net8 GND 1.55
+XR7 net8 net9 GND sky130_fd_pr__res_high_po_0p35 L=1 mult=1 m=1
+XM5 VIN net4 GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+V4 net10 GND 0.7
+XM6 VIN- net10 GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=160 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 vout net11 net6 net6 sky130_fd_pr__pfet_01v8 L=0.15 W=60 nf=10 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+V6 net11 GND 0.7
+V10 net2 GND 0 ac 10m
+XM9 vo1p vo1n GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=45 nf=8 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XR8 vo1p net6 GND sky130_fd_pr__res_high_po_0p69 L=1 mult=8 m=8
+XM7 net12 net14 VIN- GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=120 nf=10 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR3 net12 net6 GND sky130_fd_pr__res_high_po_0p35 L=0.35 mult=12 m=12
+V1 net13 GND 1.55
+XR4 net13 net14 GND sky130_fd_pr__res_high_po_0p35 L=1 mult=1 m=1
+XM14 Vo2 net19 GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=45 nf=9 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM15 net16 net15 Vo2 GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=3 m=3
+XR10 net15 net16 GND sky130_fd_pr__res_high_po_0p35 L=15 mult=1 m=1
+XM16 Vo2 net17 net16 net16 sky130_fd_pr__pfet_01v8 L=0.15 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=16 m=16
+VDD8 net16 GND 1.8
+VDD9 net20 GND 0.6
+XC7 Vo1p net15 sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+Vcasc10 net18 GND 0.9
+XR11 net18 net19 GND sky130_fd_pr__res_high_po_0p35 L=8 mult=1 m=1
+XC8 Vo1n net19 sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+XR12 net20 net17 GND sky130_fd_pr__res_high_po_0p35 L=15 mult=1 m=1
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /home/shahid/OSPDKs/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+
+.control
+ac dec 40 0.1G 10G
+
+let Zo=50;
+let Zin=v(vi)/-i(V10)
+Let S11=mag( (Zin-Zo)/(Zin+Zo) )
+plot db(S11)
+WRDATA S11.csv db(S11)
+plot mag(Zin);
+
+
+set sqrnoise
+
+noise v(Vo1n) V10 dec 40 1G 10G
+setplot noise1
+let Fn=inoise_spectrum/(8.3e-19)
+let NFn=db(Fn) / 2
+plot NFn
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

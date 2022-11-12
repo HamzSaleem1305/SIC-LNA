@@ -1,0 +1,80 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem3/Com_amp_tran.sch
+**.subckt Com_amp_tran
+VIN1 net5 GND sin 0 0 2e9 0 0 0
+Vcasc3 net1 GND 1.4
+VDD4 net2 GND 1.8
+VDD5 net3 GND 1.8
+Vbias6 net6 GND 0.75
+Vcasc7 net7 GND 1.55
+XR1 net7 net8 GND sky130_fd_pr__res_high_po_0p35 L=4 mult=1 m=1
+XC5 net8 Vo1n sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+C6 net9 Vi 1n m=1
+XM9 Vo1nn Vi GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=260 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM10 Vo1nn net4 net3 net3 sky130_fd_pr__pfet_01v8 L=0.15 W=150 nf=11 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM11 Vo1n net1 Vo1nn GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=200 nf=10 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM12 Vo1p net8 Vi GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM13 Vi net6 GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+R9 net5 net9 50 m=1
+XC1 net4 Vi sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+Vcasc1 net10 GND 0.75
+XR3 net10 net4 GND sky130_fd_pr__res_high_po_0p35 L=4 mult=1 m=1
+XR2 Vo1p net2 GND sky130_fd_pr__res_high_po_0p35 L=0.35 mult=1 m=1
+XM1 Vo1nn net11 GND GND sky130_fd_pr__nfet_01v8_lvt L=0.15 W=300 nf=20 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+VIN2 net11 GND sin 0.75 10m 2e9 0 0 180
+XM2 Vo1n net12 net2 net2 sky130_fd_pr__pfet_01v8 L=0.15 W=200 nf=11 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vcasc2 net12 GND 0.75
+**** begin user architecture code
+
+.lib /home/shahid/OSPDKs/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+
+
+.control
+tran 1p 12n
+print @m.xm9.msky130_fd_pr__nfet_01v8_lvt[vth]
+print @m.xm9.msky130_fd_pr__nfet_01v8_lvt[id]
+print @m.xm1.msky130_fd_pr__nfet_01v8_lvt[id]
+print @m.xm1.msky130_fd_pr__nfet_01v8_lvt[vth]
+print @m.xm11.msky130_fd_pr__nfet_01v8_lvt[id]
+print @m.xm11.msky130_fd_pr__nfet_01v8_lvt[vth]
+print @m.xm10.msky130_fd_pr__pfet_01v8[id]
+print @m.xm10.msky130_fd_pr__pfet_01v8[vth]
+print @m.xm12.msky130_fd_pr__nfet_01v8_lvt[id]
+print @m.xm12.msky130_fd_pr__nfet_01v8_lvt[gm]
+
+plot v(Vo1nn)
+#spectrum 1000MEG 5000MEG 100MEG v(Vo1p)
+#let abc=spectrum 1000MEG 5000MEG 100MEG v(Vo1p)
+#plot db(abc)
+#ac dec 100 1e9 10e9
+#plot db(v(Vo1p)/v(VI))
+#plot db(v(Vo2)/v(VI))
+
+#let Zo=50;
+#let Zin=v(vi)/-i(VIN1)
+#Let S11=mag( (Zin-Zo)/(Zin+Zo) )
+#plot db(S11)
+#WRDATA S11.csv db(S11)
+#plot mag(Zin);
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

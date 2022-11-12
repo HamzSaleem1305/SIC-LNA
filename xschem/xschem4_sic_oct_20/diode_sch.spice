@@ -1,0 +1,7 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_final_CMS_copy_diode/diode_sch.sch
+**.subckt diode_sch VDD VSS
+*.iopin VDD
+*.iopin VSS
+D1 VSS VDD sky130_fd_pr__diode_pw2nd_05v5 area=1e12
+**.ends
+.end

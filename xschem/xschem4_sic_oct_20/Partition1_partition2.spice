@@ -1,0 +1,72 @@
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for
+*+ layout_oct_20/Partition1_partition2.sch
+**.subckt Partition1_partition2 VRF VSI1 VOUT2 VOUT1 VTEST1 VDD VSS VB1_4 VB0_75 VB1_5
+*.iopin VRF
+*.iopin VSI1
+*.iopin VOUT2
+*.iopin VOUT1
+*.iopin VTEST1
+*.iopin VDD
+*.iopin VSS
+*.iopin VB1_4
+*.iopin VB0_75
+*.iopin VB1_5
+x1 VOUT1 VDD VB1_4 VTEST1 VRF VSI1 VB0_75 VSS partition1
+x2 VOUT2 VDD VOUT1 VSS VB1_5 VRF partition2
+**.ends
+
+* expanding   symbol:  partition1.sym # of pins=8
+** sym_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for layout_oct_20/partition1.sym
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for layout_oct_20/partition1.sch
+.subckt partition1  VOUT1 VDD VB1_4 VTEST1 VRF VSI1 VB0_75 VSS
+*.iopin VRF
+*.iopin VSS
+*.iopin VB0_75
+*.iopin VSI1
+*.iopin VB1_4
+*.iopin VTEST1
+*.iopin VOUT1
+*.iopin VDD
+XM12 VTEST1 VRF VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=220 nf=22 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM13 VTEST1 VRF VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=30 nf=3 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM14 VOUT1 VB1_4 VTEST1 VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=80 nf=8 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM16 VRF VB0_75 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM20 VTEST1 VSI1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=240 nf=24 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR16 VB0_75 VSI1 VSS sky130_fd_pr__res_high_po_0p35 L=6.2 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  partition2.sym # of pins=6
+** sym_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for layout_oct_20/partition2.sym
+** sch_path: /home/shahid/Desktop/EDA/test/xschem4_sic_sized_for layout_oct_20/partition2.sch
+.subckt partition2  VOUT2 VDD VOUT1 VSS VB1_5 VRF
+*.iopin VDD
+*.iopin VOUT1
+*.iopin VOUT2
+*.iopin VB1_5
+*.iopin VSS
+*.iopin VRF
+XR4 VB1_5 net1 VSS sky130_fd_pr__res_high_po_0p35 L=4 mult=1 m=1
+XC5 net1 VOUT1 sky130_fd_pr__cap_mim_m3_2 W=30 L=30 MF=1 m=1
+XM15 net2 net1 VRF VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR14 net2 VDD VSS sky130_fd_pr__res_high_po_0p35 L=0.5 mult=1 m=1
+XR15 VOUT1 VDD VSS sky130_fd_pr__res_high_po_0p69 L=0.69 mult=8 m=8
+XM21 VOUT2 VOUT1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=7.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR17 VOUT2 VDD VSS sky130_fd_pr__res_high_po_0p35 L=0.5 mult=1 m=1
+.ends
+
+.end
