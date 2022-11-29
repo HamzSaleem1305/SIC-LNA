@@ -20,17 +20,17 @@ ext2spice scale off
 
 # Allow override of PDK path from environment variable PDKPATH
 if {[catch {set PDKPATH $env(PDKPATH)}]} {
-    set PDKPATH "/home/shahid/OSPDKs/sky130B"
+    set PDKPATH "/home/shahid/OSPDKs/sky130A"
 }
 
 # loading technology
-tech load $PDKPATH/libs.tech/magic/sky130B.tech
+tech load $PDKPATH/libs.tech/magic/sky130A.tech
 
 # load device generator
-source $PDKPATH/libs.tech/magic/sky130B.tcl
+source $PDKPATH/libs.tech/magic/sky130A.tcl
 
 # load bind keys (optional)
-# source $PDKPATH/libs.tech/magic/sky130B-BindKeys
+# source $PDKPATH/libs.tech/magic/sky130A-BindKeys
 
 # set units to lambda grid 
 snap lambda
